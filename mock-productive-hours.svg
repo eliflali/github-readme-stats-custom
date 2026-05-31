@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="100%" stop-color="#bc8cff" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      fill: #f0f6fc;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      fill: #58a6ff;
+      letter-spacing: 0.5px;
+    }
+    .row-label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      fill: #8b949e;
+    }
+    .row-value {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      text-anchor: end;
+    }
+    .row-percent {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .bar-bg {
+      fill: #161b22;
+      stroke: #30363d;
+      stroke-width: 0.5;
+    }
+    .bar-fill {
+      transition: width 0.8s ease-out;
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="10" fill="url(#bgGradient)" stroke="url(#borderGradient)" stroke-width="1.5" />
+
+  <!-- Header Titles -->
+  <text x="22" y="34" class="title fade-in" style="animation-delay: 0.1s;">Elif Lale's Productive Hours</text>
+  <text x="473" y="34" text-anchor="end" class="subtitle fade-in" style="animation-delay: 0.12s;">ANALYTIC OFFSET: UTC+2</text>
+
+  <!-- Horizontal Rows -->
+  <!-- Block: Morning -->
+  <g class="fade-in" style="animation-delay: 0.2s;">
+    <text x="22" y="69" class="row-label">🌅 <tspan font-weight="700" fill="#c9d1d9">Morning</tspan> (6am - 12pm)</text>
+    <rect x="200" y="60" width="160" height="10" rx="5" class="bar-bg" />
+    <rect x="200" y="60" width="19.2" height="10" rx="5" fill="#ff9b6a" class="bar-fill" />
+    <text x="372" y="69" class="row-value" fill="#8b949e" font-weight="500">12</text>
+    <text x="395" y="69" class="row-percent" fill="#8b949e">12%</text>
+  </g>
+
+  <!-- Block: Afternoon -->
+  <g class="fade-in" style="animation-delay: 0.3s;">
+    <text x="22" y="98" class="row-label">☀️ <tspan font-weight="700" fill="#c9d1d9">Afternoon</tspan> (12pm - 6pm)</text>
+    <rect x="200" y="89" width="160" height="10" rx="5" class="bar-bg" />
+    <rect x="200" y="89" width="44.8" height="10" rx="5" fill="#ffdb6d" class="bar-fill" />
+    <text x="372" y="98" class="row-value" fill="#8b949e" font-weight="500">28</text>
+    <text x="395" y="98" class="row-percent" fill="#8b949e">28%</text>
+  </g>
+
+  <!-- Block: Evening (PEAK) -->
+  <g class="fade-in" style="animation-delay: 0.4s;">
+    <text x="22" y="127" class="row-label">🌆 <tspan font-weight="700" fill="#c9d1d9">Evening</tspan> (6pm - 12am)</text>
+    <rect x="200" y="118" width="160" height="10" rx="5" class="bar-bg" />
+    <rect x="200" y="118" width="76.8" height="10" rx="5" fill="#58a6ff" class="bar-fill" />
+    <text x="372" y="127" class="row-value" fill="#ffffff" font-weight="700">48</text>
+    <text x="395" y="127" class="row-percent" fill="#58a6ff">48%</text>
+    
+    <g transform="translate(420, 120)">
+      <rect width="52" height="15" rx="4" fill="#58a6ff" opacity="0.2" />
+      <rect width="52" height="15" rx="4" fill="none" stroke="#58a6ff" stroke-width="0.75" />
+      <text x="26" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8px" font-weight="800" fill="#58a6ff" text-anchor="middle" letter-spacing="0.5px">PEAK HOUR</text>
+    </g>
+  </g>
+
+  <!-- Block: Night Owl -->
+  <g class="fade-in" style="animation-delay: 0.5s;">
+    <text x="22" y="156" class="row-label">🦉 <tspan font-weight="700" fill="#c9d1d9">Night Owl</tspan> (12am - 6am)</text>
+    <rect x="200" y="147" width="160" height="10" rx="5" class="bar-bg" />
+    <rect x="200" y="147" width="19.2" height="10" rx="5" fill="#bc8cff" class="bar-fill" />
+    <text x="372" y="156" class="row-value" fill="#8b949e" font-weight="500">12</text>
+    <text x="395" y="156" class="row-percent" fill="#8b949e">12%</text>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="100%" stop-color="#bc8cff" />
+    </linearGradient>
+    <clipPath id="barClip">
+      <rect x="22" y="60" width="451" height="10" rx="5" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      fill: #f0f6fc;
+    }
+    .lang-name {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      fill: #c9d1d9;
+    }
+    .lang-percent {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      fill: #8b949e;
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="10" fill="url(#bgGradient)" stroke="url(#borderGradient)" stroke-width="1.5" />
+
+  <!-- Header Title -->
+  <text x="22" y="36" class="title fade-in" style="animation-delay: 0.1s;">Elif Lale's Top Languages</text>
+
+  <!-- Segmented Distribution Bar -->
+  <g clip-path="url(#barClip)" class="fade-in" style="animation-delay: 0.15s;">
+    <rect x="22" y="60" width="236.3" height="10" fill="#3178c6" />
+    <rect x="258.3" y="60" width="108.7" height="10" fill="#f1e05a" />
+    <rect x="367.0" y="60" width="47.4" height="10" fill="#563d7c" />
+    <rect x="414.4" y="60" width="37.0" height="10" fill="#e34c26" />
+    <rect x="451.4" y="60" width="21.6" height="10" fill="#444c56" />
+  </g>
+
+  <!-- Legend Grid -->
+  <g class="fade-in" style="animation-delay: 0.2s;">
+    <circle cx="27" cy="93" r="5" fill="#3178c6" />
+    <text x="40" y="98" class="lang-name">TypeScript</text>
+    <text x="172" y="98" class="lang-percent">52.4%</text>
+  </g>
+  
+  <g class="fade-in" style="animation-delay: 0.3s;">
+    <circle cx="260" cy="93" r="5" fill="#f1e05a" />
+    <text x="273" y="98" class="lang-name">JavaScript</text>
+    <text x="405" y="98" class="lang-percent">24.1%</text>
+  </g>
+
+  <g class="fade-in" style="animation-delay: 0.4s;">
+    <circle cx="27" cy="119" r="5" fill="#563d7c" />
+    <text x="40" y="124" class="lang-name">CSS</text>
+    <text x="172" y="124" class="lang-percent">10.5%</text>
+  </g>
+
+  <g class="fade-in" style="animation-delay: 0.5s;">
+    <circle cx="260" cy="119" r="5" fill="#e34c26" />
+    <text x="273" y="124" class="lang-name">HTML</text>
+    <text x="405" y="124" class="lang-percent">8.2%</text>
+  </g>
+
+  <g class="fade-in" style="animation-delay: 0.6s;">
+    <circle cx="27" cy="145" r="5" fill="#444c56" />
+    <text x="40" y="150" class="lang-name">Others</text>
+    <text x="172" y="150" class="lang-percent">4.8%</text>
+  </g>
+</svg>
