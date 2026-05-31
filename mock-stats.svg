@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="100%" stop-color="#bc8cff" />
+    </linearGradient>
+    <clipPath id="avatarClip">
+      <circle cx="38" cy="30" r="16" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .stat-label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      fill: #8b949e;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    .stat-value {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      fill: #f0f6fc;
+      font-weight: 700;
+    }
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      fill: #f0f6fc;
+    }
+    .avatar-border {
+      stroke: url(#borderGradient);
+      stroke-width: 1.5;
+      fill: none;
+    }
+    .card-panel {
+      fill: #161b22;
+      stroke: #30363d;
+      stroke-width: 1;
+      transition: fill 0.3s, stroke 0.3s;
+    }
+    .card-panel:hover {
+      fill: #1f242c;
+      stroke: #444c56;
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="10" fill="url(#bgGradient)" stroke="url(#borderGradient)" stroke-width="1.5" />
+
+  <!-- Profile Avatar (Conditional) -->
+  
+  <g class="fade-in" style="animation-delay: 0s;">
+    <image x="22" y="14" width="32" height="32" clip-path="url(#avatarClip)" href="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
+    <circle cx="38" cy="30" r="16" class="avatar-border" />
+  </g>
+  
+
+  <!-- Header Title -->
+  <text x="64" y="36" class="title fade-in" style="animation-delay: 0.1s;">Elif Lale's GitHub Stats</text>
+
+  <!-- Metrics Grid -->
+  <!-- Panel 1: Commits -->
+  <g class="fade-in" style="animation-delay: 0.2s;">
+    <rect x="22" y="60" width="218" height="52" rx="8" class="card-panel" />
+    <svg x="37" y="78" width="16" height="16" viewBox="0 0 16 16" fill="#58a6ff">
+      <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.002 4.002 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z" />
+    </svg>
+    <text x="62" y="78" class="stat-label">Commits</text>
+    <text x="62" y="98" class="stat-value">1,458</text>
+  </g>
+
+  <!-- Panel 2: Stars -->
+  <g class="fade-in" style="animation-delay: 0.3s;">
+    <rect x="255" y="60" width="218" height="52" rx="8" class="card-panel" />
+    <svg x="270" y="78" width="16" height="16" viewBox="0 0 16 16" fill="#f1e05a">
+      <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694z" />
+    </svg>
+    <text x="295" y="78" class="stat-label">Stargazers</text>
+    <text x="295" y="98" class="stat-value">412</text>
+  </g>
+
+  <!-- Panel 3: PRs -->
+  <g class="fade-in" style="animation-delay: 0.4s;">
+    <rect x="22" y="122" width="218" height="52" rx="8" class="card-panel" />
+    <svg x="37" y="140" width="16" height="16" viewBox="0 0 16 16" fill="#bc8cff">
+      <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a2.25 2.25 0 012.25 2.25v5.256a2.251 2.251 0 11-1.5 0V6.25A.75.75 0 0011 5.5zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5zm7.5 0a.75.75 0 100 1.5.75.75 0 000-1.5z" />
+    </svg>
+    <text x="62" y="140" class="stat-label">Pull Requests</text>
+    <text x="62" y="160" class="stat-value">231</text>
+  </g>
+
+  <!-- Panel 4: Issues -->
+  <g class="fade-in" style="animation-delay: 0.5s;">
+    <rect x="255" y="122" width="218" height="52" rx="8" class="card-panel" />
+    <svg x="270" y="140" width="16" height="16" viewBox="0 0 16 16" fill="#3fb950">
+      <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z" />
+    </svg>
+    <text x="295" y="140" class="stat-label">Issues Created</text>
+    <text x="295" y="160" class="stat-value">45</text>
+  </g>
+</svg>

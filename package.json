@@ -1,0 +1,22 @@
+{
+  "name": "github-readme-stats-custom",
+  "version": "1.0.0",
+  "description": "Custom GitHub README Profile Stats Generator using TypeScript and Vercel",
+  "main": "api/stats.ts",
+  "scripts": {
+    "build": "tsc",
+    "vercel-dev": "vercel dev",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@vercel/node": "^3.0.24",
+    "typescript": "^5.5.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
