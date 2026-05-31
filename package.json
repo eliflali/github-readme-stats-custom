@@ -4,7 +4,7 @@
   "description": "Custom GitHub README Profile Stats Generator using TypeScript and Vercel",
   "main": "api/stats.ts",
   "scripts": {
-    "build": "tsc",
+    "compile": "tsc",
     "vercel-dev": "vercel dev",
     "typecheck": "tsc --noEmit"
   },
